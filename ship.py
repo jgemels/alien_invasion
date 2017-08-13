@@ -10,12 +10,12 @@ class Ship():
 
         # Wczytywanie obrazu statku kosmiecznego i poieranie jego prostokąta
         self.image = pygame.image.load('images/ship.bmp')
-        self.rect = self.image.get.react()
-        self.screen_react = screen.get.react()
+        self.rect = self.image.get_rect()
+        self.screen_rect = screen.get_rect()
 
         # Każdy nowy statek kosmiczny pojawia się na dole ekranu
-        self.rect.centerx = self.screnn_rect.centerx
-        self.rect.bottom = self.screnn_rect.bottom
+        self.rect.centerx = self.screen_rect.centerx
+        self.rect.bottom = self.screen_rect.bottom
 
     def blitme(self):
         """Wyświetlanie statku kosmicznego w jego aktualnym położeniu"""

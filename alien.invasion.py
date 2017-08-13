@@ -4,6 +4,7 @@ import pygame
 
 
 from settings import Settings
+from ship import Ship
 
 
 def run_game():
@@ -13,6 +14,9 @@ def run_game():
     screen = pygame.display.set_mode(
         (ai_settings.screen_width, ai_settings.screen_height))
     pygame.display.set_caption("Inwazja obcych")
+
+    # Utworzenie statku kosmicznego
+    ship = Ship(screen)
 
     # Rozpoczęcie pętli głównej gry
     while True:
@@ -24,6 +28,7 @@ def run_game():
 
         # Odświeżenie ekranu w trakcie każdej iteracji pętli
         screen.fill(ai_settings.bg_color)
+        ship.blitme()
 
         # Wyświetlnie ostanio modyfikowanego ekranu
         pygame.display.flip()
