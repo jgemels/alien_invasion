@@ -20,13 +20,7 @@ def run_game():
     # Rozpoczęcie pętli głównej gry
     while True:
         gf.check_events()
-
-        # Odświeżenie ekranu w trakcie każdej iteracji pętli
-        screen.fill(ai_settings.bg_color)
-        ship.blitme()
-
-        # Wyświetlnie ostanio modyfikowanego ekranu
-        pygame.display.flip()
+        gf.update_screen(ai_settings, screen, ship)
 
 
 run_game()
